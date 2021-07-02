@@ -44,7 +44,6 @@ jQuery(window).on("load", function () {
         }
     });
 
-    $('select').niceSelect();
 
 
     $(function () {
@@ -70,14 +69,7 @@ jQuery(window).on("load", function () {
     smoothScroll.init({
         offset: 60
     });
-    // $(function () {
-    //     // var win_w = window.outerWidth;
-    //     var win_h = window.outerHeight;
-    //     var win_h = window.outerHeight;
-    //     if (win_h > 0 ? win_h : screen.height) {
-    //         $(".content-body").css("min-height", (win_h + 60) + "px");
-    //     };
-    // });
+
     $(window).on('scroll', function () {
         if ($(this).scrollTop() > 100) {
             $('#scroll-to-top').fadeIn();
@@ -90,29 +82,6 @@ jQuery(window).on("load", function () {
     });
 
     $('[data-toggle="tooltip"]').tooltip();
-
-    $('.data-close').on('click', function () {
-        e.preventDefault();
-        $(this).parent().parent().remove();
-    });
-
-    $("#tbUser").on('click', '.btnDelete', function () {
-        $(this).closest('tr').remove();
-    });
-
-
-    $(function () {
-        if (jQuery('#slider').length > 0) {
-            var slider = document.getElementById("slider");
-            slider.oninput = function () {
-                $('.count').text(this.value).css({
-                    'left': this.value + '%',
-                    'transform': 'translateX(-' + this.value + '%)'
-                });
-                $('.fill').css('width', this.value + '%');
-            }
-        }
-    });
 
     /* Magnific Popup ============ */
     /* magnificPopup function */

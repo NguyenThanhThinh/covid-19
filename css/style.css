@@ -8814,7 +8814,8 @@ strong,
       text-align: right;
       padding: 10px 30px;
       margin-bottom: 30px;
-      position: relative; }
+      position: relative;
+      min-width: 180px; }
       @media only screen and (max-width: 767px) {
         .counter-area .count-miter-3 .count-area {
           padding: 5px 15px;

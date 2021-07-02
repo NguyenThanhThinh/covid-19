@@ -66,6 +66,7 @@
 			padding: 10px 30px;
 			margin-bottom: 30px;
 			position:relative;
+			min-width: 180px;
 			@include respond('phone-land'){
 				padding:5px 15px;
 			    margin-bottom: 15px;	
@@ -118,9 +119,6 @@
 		@include respond('phone-land'){
 			margin-top: 30px;
 		}
-	}
-	.hero-img img{ 
-		
 	}
 }
 @media screen and (max-width: 1200px) {

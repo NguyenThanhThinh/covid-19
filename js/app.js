@@ -158,6 +158,37 @@ jQuery(window).on("load", function () {
         });
     }
 
+    jQuery(window).on('load', function () {
+        if (jQuery('#VN_Positive').length > 0) { getDataCovid(); }
+
+
+    });
+
+    function getDataCovid() {
+        var $url = 'https://api.covid19api.com/summary';
+        jQuery.ajax({
+            method: 'GET',
+            url: $url,
+            dataType: 'json',
+            beforeSend: function (xhr) {
+            },
+            success: function (response) {
+                if (Object.entries(response).length > 0) {
+                    var country = response.Countries.find(n => n.CountryCode == "VN");
+                    jQuery('#VN_Positive').text(country.TotalConfirmed);
+                    jQuery('#VN_Death').text(country.TotalDeaths);
+                    jQuery('#VN_Recovered').text(country.TotalRecovered);
+                }
+            },
+            error: function (response) {
+                alert('Something is wrong, Please wait.');
+            },
+            fail: function (response) {
+                alert('Something is wrong, Please wait.');
+            },
+        });
+    }
+
 })(jQuery);;
 
 

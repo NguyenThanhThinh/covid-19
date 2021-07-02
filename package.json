@@ -1,0 +1,23 @@
+{
+  "name": "covid-19",
+  "version": "1.0.0",
+  "description": "use html css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"scss": "sass scss/style.scss css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NguyenThanhThinh/covid-19.git"
+  },
+  "keywords": [
+    "covid-19"
+  ],
+  "author": "Thinh Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NguyenThanhThinh/covid-19/issues"
+  },
+  "homepage": "https://github.com/NguyenThanhThinh/covid-19#readme"
+}

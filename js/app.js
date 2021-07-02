@@ -139,12 +139,13 @@ jQuery(window).on("load", function () {
     }
 
     jQuery(window).on('load', function () {
-        if (jQuery('#VN_Positive').length > 0) { getDataCovid(); }
+        if (jQuery('#VN_Positive').length > 0) { getDataCovid(); getDataProvinceCovidVietNam(); }
 
     });
 
     function getDataCovid() {
-        var $url = 'https://api.covid19api.com/summary';
+        const $url = 'https://api.covid19api.com/summary';
+        const CODE_VIETNAM = "VN";
         jQuery.ajax({
             method: 'GET',
             url: $url,
@@ -153,10 +154,12 @@ jQuery(window).on("load", function () {
             },
             success: function (response) {
                 if (Object.entries(response).length > 0) {
-                    var country = response.Countries.find(n => n.CountryCode == "VN");
-                    jQuery('#VN_Positive').text(country.TotalConfirmed);
-                    jQuery('#VN_Death').text(country.TotalDeaths);
-                    jQuery('#VN_Recovered').text(country.TotalRecovered);
+                    var country = response.Countries.find(n => n.CountryCode == CODE_VIETNAM);
+                    if (Object.entries(country).length > 0) {
+                        jQuery('#VN_Positive').text(country.TotalConfirmed);
+                        jQuery('#VN_Death').text(country.TotalDeaths);
+                        jQuery('#VN_Recovered').text(country.TotalRecovered);
+                    }
                 }
             },
             error: function (response) {
@@ -168,6 +171,27 @@ jQuery(window).on("load", function () {
         });
     }
 
+    function getDataProvinceCovidVietNam() {
+        const $url = 'https://tuoitre.io/covid/danh-sach';
+        var provinces = [];
+        jQuery.ajax({
+            method: 'GET',
+            url: $url,
+            dataType: 'json',
+            beforeSend: function (xhr) {
+            },
+            success: function (response) {
+
+            },
+            error: function (response) {
+                alert('Something is wrong, Please wait.');
+            },
+            fail: function (response) {
+                alert('Something is wrong, Please wait.');
+            },
+        });
+
+    }
 })(jQuery);;
 
 

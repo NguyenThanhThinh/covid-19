@@ -64,7 +64,12 @@ jQuery(window).on("load", function () {
         }
 
     });
-
+    /*=========================================================================
+        Initialize smoothscroll plugin
+    =========================================================================*/
+    smoothScroll.init({
+        offset: 60
+    });
     // $(function () {
     //     // var win_w = window.outerWidth;
     //     var win_h = window.outerHeight;
@@ -73,7 +78,13 @@ jQuery(window).on("load", function () {
     //         $(".content-body").css("min-height", (win_h + 60) + "px");
     //     };
     // });
-
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() > 100) {
+            $('#scroll-to-top').fadeIn();
+        } else {
+            $('#scroll-to-top').fadeOut();
+        }
+    });
     $('.sidebar-right-trigger').on('click', function () {
         $('.sidebar-right').toggleClass('show');
     });

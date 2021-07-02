@@ -172,7 +172,6 @@ jQuery(window).on("load", function () {
     jQuery(window).on('load', function () {
         if (jQuery('#VN_Positive').length > 0) { getDataCovid(); }
 
-
     });
 
     function getDataCovid() {

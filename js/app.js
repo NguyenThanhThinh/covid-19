@@ -152,12 +152,7 @@ jQuery(window).on("load", function () {
   }
 
   jQuery(window).on("load", function () {
-    if (jQuery("#VN_Positive").length > 0) {
-      getDataCovid();
-    }
-    if (jQuery("#ProvinceDataTable").length > 0) {
-      getDataProvinceCovidVietNam();
-    }
+    getDataProvinceCovidVietNam();
   });
 
   // function getDataCovid() {

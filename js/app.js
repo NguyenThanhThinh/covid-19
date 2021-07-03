@@ -1,4 +1,9 @@
 jQuery(window).on("load", function () {
+  console.log(`%c
+  Contact me:
+  P: 0965.899.230
+  E: thanhthinhcntt@gmail.com
+`, 'background: #4caf50; color: #fff; font-size: 32px;');
   $("#preloader").fadeOut(500);
   $("#main-wrapper").addClass("show");
 });

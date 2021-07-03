@@ -245,7 +245,7 @@ jQuery(window).on("load", function () {
       },
     });
   }
-
+  // append html jquery to owlCarousel not work because i use case it ::))))
   function getTopProvinceCovidVietNam(data) {
     data.forEach((province) => {
       if (

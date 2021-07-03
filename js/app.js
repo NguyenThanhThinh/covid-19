@@ -1,9 +1,12 @@
 jQuery(window).on("load", function () {
-  console.log(`%c
+  console.log(
+    `%c
   Contact me:
   P: 0965.899.230
   E: thanhthinhcntt@gmail.com
-`, 'background: #4caf50; color: #fff; font-size: 32px;');
+`,
+    "background: #4caf50; color: #fff; font-size: 32px;"
+  );
   $("#preloader").fadeOut(500);
   $("#main-wrapper").addClass("show");
 });
@@ -18,7 +21,7 @@ jQuery(window).on("load", function () {
       if (this.hash !== "") {
         var hash = this.hash;
         var seactionPosition = $(hash).offset().top;
-        var headerHeight = parseInt($(".onepage").css("height"),10);
+        var headerHeight = parseInt($(".onepage").css("height"), 10);
 
         $("body").scrollspy({
           target: ".scroll-nav",
@@ -210,6 +213,7 @@ jQuery(window).on("load", function () {
               });
             }
           });
+          getTopProvinceCovidVietNam(provinces);
           jQuery.each(provinces, function (index, data) {
             var rowValues = {};
             rowValues[0] = data.id;
@@ -241,6 +245,66 @@ jQuery(window).on("load", function () {
       },
     });
   }
+
+  function getTopProvinceCovidVietNam(data) {
+    data.forEach((province) => {
+      if (
+        jQuery("#TopCovidProvince [data-country-id='" + province.id + "']")
+          .length > 0
+      ) {
+        jQuery(
+          "#TopCovidProvince [data-country-id='" + province.id + "'] .title"
+        ).text(province.name);
+        jQuery(
+          "#TopCovidProvince [data-country-id='" +
+            province.id +
+            "'] .dz-totalcases"
+        ).text(province.totalcases);
+        jQuery(
+          "#TopCovidProvince [data-country-id='" +
+            province.id +
+            "'] .dz-newcases"
+        ).text(province.newcases);
+      }
+    });
+  }
+
+  jQuery(document).ready(function () {
+    jQuery(".covid-province-info").owlCarousel({
+      loop: true,
+      center: false,
+      margin: 0,
+      nav: true,
+      autoplaySpeed: 3000,
+      navSpeed: 3000,
+      paginationSpeed: 3000,
+      slideSpeed: 3000,
+      smartSpeed: 3000,
+      autoplay: 3000,
+      dots: true,
+      navText: [
+        '<i class="fa fa-angle-left"></i>',
+        '<i class="fa fa-angle-right"></i>',
+      ],
+      responsive: {
+        0: {
+          items: 1,
+        },
+        480: {
+          items: 2,
+        },
+        1024: {
+          items: 3,
+        },
+        1200: {
+          items: 4,
+        },
+        1400: {
+          items: 4,
+        },
+      },
+    });
+  });
 })(jQuery);
 
 //ripple effect on button

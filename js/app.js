@@ -187,15 +187,13 @@ jQuery(window).on("load", function () {
   function getTotalCovidVietNam(data) {
     var todaycases = 0;
     var total = data[0][2];
-    data.shift();
-    var spread = Object.keys(data).length;
     for (i = 0; i < data.length; i++) {
       if (data[i][Object.keys(data[0]).length - 1] > 0)
         todaycases += data[i][Object.keys(data[0]).length - 1];
     }
     jQuery("#VN_Positive").text(total);
     jQuery("#VN_Total").text(todaycases);
-    jQuery("#VN_Spread").text(`${spread}/63`);
+
   }
 
   function getDataProvinceCovidVietNam() {
@@ -224,6 +222,8 @@ jQuery(window).on("load", function () {
             }
           });
           getTopProvinceCovidVietNam(provinces);
+          var spread = Object.keys(provinces).length;
+          jQuery("#VN_Spread").text(`${spread}/63`);
           jQuery.each(provinces, function (index, data) {
             var rowValues = {};
             rowValues[0] = data.id;

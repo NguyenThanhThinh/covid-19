@@ -160,33 +160,47 @@ jQuery(window).on("load", function () {
     }
   });
 
-  function getDataCovid() {
-    const $url = "https://api.covid19api.com/summary";
-    const CODE_VIETNAM = "VN";
-    jQuery.ajax({
-      method: "GET",
-      url: $url,
-      dataType: "json",
-      beforeSend: function (xhr) {},
-      success: function (response) {
-        if (Object.entries(response).length > 0) {
-          var country = response.Countries.find(
-            (n) => n.CountryCode == CODE_VIETNAM
-          );
-          if (Object.entries(country).length > 0) {
-            jQuery("#VN_Positive").text(country.TotalConfirmed);
-            jQuery("#VN_Death").text(country.TotalDeaths);
-            jQuery("#VN_Recovered").text(country.TotalRecovered);
-          }
-        }
-      },
-      error: function (response) {
-        alert("Something is wrong, Please wait.");
-      },
-      fail: function (response) {
-        alert("Something is wrong, Please wait.");
-      },
-    });
+  // function getDataCovid() {
+  //   const $url = "https://api.covid19api.com/summary";
+  //   const CODE_VIETNAM = "VN";
+  //   jQuery.ajax({
+  //     method: "GET",
+  //     url: $url,
+  //     dataType: "json",
+  //     beforeSend: function (xhr) {},
+  //     success: function (response) {
+  //       if (Object.entries(response).length > 0) {
+  //         var country = response.Countries.find(
+  //           (n) => n.CountryCode == CODE_VIETNAM
+  //         );
+  //         if (Object.entries(country).length > 0) {
+  //           // jQuery("#VN_Positive").text(country.TotalConfirmed);
+  //           // jQuery("#VN_Death").text(country.TotalDeaths);
+  //           // jQuery("#VN_Recovered").text(country.TotalRecovered);
+  //         }
+  //       }
+  //     },
+  //     error: function (response) {
+  //       alert("Something is wrong, Please wait.");
+  //     },
+  //     fail: function (response) {
+  //       alert("Something is wrong, Please wait.");
+  //     },
+  //   });
+  // }
+
+  function getTotalCovidVietNam(data) {
+    var todaycases = 0;
+    var total = data[0][2];
+    data.shift();
+    var spread = Object.keys(data).length;
+    for (i = 0; i < data.length; i++) {
+      if (data[i][Object.keys(data[0]).length - 1] > 0)
+        todaycases += data[i][Object.keys(data[0]).length - 1];
+    }
+    jQuery("#VN_Positive").text(total);
+    jQuery("#VN_Total").text(todaycases);
+    jQuery("#VN_Spread").text(`${spread}/63`);
   }
 
   function getDataProvinceCovidVietNam() {
@@ -200,6 +214,7 @@ jQuery(window).on("load", function () {
       success: function (response) {
         var dataSet = [];
         if (Object.entries(response).length > 0 != null) {
+          getTotalCovidVietNam(response);
           response.map(function (province, index) {
             if (index > 0) {
               provinces.push({

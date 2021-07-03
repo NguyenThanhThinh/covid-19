@@ -11363,10 +11363,10 @@ strong,
   right: -5px;
   top: 15px;
 }
-.counter-area .count-miter-3 .death {
+.counter-area .count-miter-3 .spread {
   background: #ff5252;
 }
-.counter-area .count-miter-3 .recover {
+.counter-area .count-miter-3 .total {
   background: #76cc76;
 }
 .counter-area .hero-img {

@@ -165,7 +165,6 @@ jQuery(window).on("load", function () {
           var country = response.Countries.find(
             (n) => n.CountryCode == CODE_VIETNAM
           );
-          debugger;
           if (Object.entries(country).length > 0) {
             jQuery("#VN_Positive").text(country.TotalConfirmed);
             jQuery("#VN_Death").text(country.TotalDeaths);

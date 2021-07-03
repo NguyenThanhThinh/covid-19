@@ -13,7 +13,7 @@ jQuery(window).on("load", function () {
       if (this.hash !== "") {
         var hash = this.hash;
         var seactionPosition = $(hash).offset().top;
-        var headerHeight = parseInt($(".onepage").css("height"), 10);
+        var headerHeight = parseInt($(".onepage").css("height"),10);
 
         $("body").scrollspy({
           target: ".scroll-nav",

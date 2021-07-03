@@ -11247,6 +11247,11 @@ strong,
   opacity: 0.1;
 }
 
+.owl-none .owl-nav,
+.owl-none .owl-dots {
+  display: none;
+}
+
 .hero.banner-3 {
   background-image: url(./../images/hero/7.png);
   background-size: contain;

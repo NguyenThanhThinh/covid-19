@@ -409,3 +409,9 @@
     background-size: 100%;
     opacity: 0.1;
 }
+.owl-none{ 
+	.owl-nav,
+	.owl-dots{
+		display:none;
+	}
+}

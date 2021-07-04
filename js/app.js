@@ -193,7 +193,6 @@ jQuery(window).on("load", function () {
     }
     jQuery("#VN_Positive").text(total);
     jQuery("#VN_Total").text(todaycases);
-
   }
 
   function getDataProvinceCovidVietNam() {
@@ -210,14 +209,27 @@ jQuery(window).on("load", function () {
           getTotalCovidVietNam(response);
           response.map(function (province, index) {
             if (index > 0) {
+              let upDownCases =
+                province[Object.keys(response[0]).length - 1] -
+                province[Object.keys(response[0]).length - 2];
               provinces.push({
                 id: index,
                 name: province[1],
                 newcases:
                   province[Object.keys(response[0]).length - 1] > 0
                     ? province[Object.keys(response[0]).length - 1]
-                    : "Không có",
+                    : 0,
+                yesterdaycases:
+                  province[Object.keys(response[0]).length - 2] > 0
+                    ? province[Object.keys(response[0]).length - 2]
+                    : 0,
                 totalcases: province[2],
+                updowncases:
+                  upDownCases > 0
+                    ? `Tăng ${upDownCases}`
+                    : upDownCases == 0
+                    ? 0
+                    : `Giảm ${Math.abs(upDownCases)}`,
               });
             }
           });
@@ -228,8 +240,10 @@ jQuery(window).on("load", function () {
             var rowValues = {};
             rowValues[0] = data.id;
             rowValues[1] = data.name;
-            rowValues[2] = data.newcases;
-            rowValues[3] = data.totalcases;
+            rowValues[2] = data.yesterdaycases;
+            rowValues[3] = data.newcases;
+            rowValues[4] = data.updowncases;
+            rowValues[5] = data.totalcases;
             dataSet.push(rowValues);
           });
           $("#ProvinceDataTable").DataTable({
@@ -240,7 +254,9 @@ jQuery(window).on("load", function () {
             columns: [
               { title: "STT" },
               { title: "Tỉnh Thành" },
+              { title: "Hôm qua" },
               { title: "Hôm nay" },
+              { title: "Tăng/Giảm" },
               { title: "Tổng" },
             ],
             order: [[0, "asc"]],

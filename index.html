@@ -1,682 +1,628 @@
 <!DOCTYPE html>
 <html lang="vi-VN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="canonical" href="https://nguyenthanhthinh.github.io/covid-19" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      name="keywords"
-      content="tinh hinh covid-19, covid-19, covid viet nam, viet nam covid"
-    />
-    <meta name="description" content="covid-19 viet name" />
-    <title>Covid-19</title>
-    <!-- Favicon icon -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./images/favicon.png"
-    />
-    <link
-      rel="stylesheet"
-      href="./vendor/magnific-popup/magnific-popup.min.css"
-    />
-    <link rel="stylesheet" href="vendor/datatables/datatables.min.css" />
-    <link
-      rel="stylesheet"
-      href="./vendor/owl-carousel/css/owl.theme.default.css"
-    />
-    <link
-      rel="stylesheet"
-      href="./vendor/owl-carousel/css/owl.carousel.min.css"
-    />
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <meta http-equiv="audience" content="General" />
-    <meta name="resource-type" content="Document" />
-    <meta name="distribution" content="Global" />
-    <meta name="revisit-after" content="1 days" />
-    <meta http-equiv="x-dns-prefetch-control" content="on" />
-  </head>
 
-  <body>
-    <div id="preloader">
-      <div class="sk-three-bounce">
-        <div class="sk-child sk-bounce1"></div>
-        <div class="sk-child sk-bounce2"></div>
-        <div class="sk-child sk-bounce3"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://nguyenthanhthinh.github.io/covid-19" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="keywords" content="tinh hinh covid-19, covid-19, covid viet nam, viet nam covid" />
+  <meta name="description" content="covid-19 viet name" />
+  <title>Covid-19</title>
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png" />
+  <link rel="stylesheet" href="./vendor/magnific-popup/magnific-popup.min.css" />
+  <link rel="stylesheet" href="vendor/datatables/datatables.min.css" />
+  <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.theme.default.css" />
+  <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.carousel.min.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <meta http-equiv="audience" content="General" />
+  <meta name="resource-type" content="Document" />
+  <meta name="distribution" content="Global" />
+  <meta name="revisit-after" content="1 days" />
+  <meta http-equiv="x-dns-prefetch-control" content="on" />
+</head>
+
+<body>
+  <div id="preloader">
+    <div class="sk-three-bounce">
+      <div class="sk-child sk-bounce1"></div>
+      <div class="sk-child sk-bounce2"></div>
+      <div class="sk-child sk-bounce3"></div>
+    </div>
+  </div>
+  <div id="main-wrapper">
+    <div class="header onepage" id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="navigation">
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="index.html"><img src="./images/logo.png" alt="" class="img-fluid" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                  aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html" data-toggle="dropdown">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link scroll" href="#symptom">Triệu chứng</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link scroll" href="#spread">Lây lan</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link scroll" href="#prevention">Phòng ngừa</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link scroll" href="#hand-wash">Rửa tay</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown">Thống kê
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item scroll" href="#covid-19">Tỉnh thành
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="signin-btn">
+                  <a class="btn btn-primary" href="#">Theo dõi COVID-19</a>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div id="main-wrapper">
-      <div class="header onepage" id="header">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-12">
-              <div class="navigation">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                  <a class="navbar-brand" href="index.html"
-                    ><img src="./images/logo.png" alt="" class="img-fluid"
-                  /></a>
-                  <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                  >
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="index.html"
-                          data-toggle="dropdown"
-                          >Trang chủ</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link scroll" href="#symptom"
-                          >Triệu chứng</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link scroll" href="#spread">Lây lan</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link scroll" href="#prevention"
-                          >Phòng ngừa</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link scroll" href="#hand-wash">Rửa tay</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a
-                          class="nav-link dropdown-toggle"
-                          href="javascript:void(0)"
-                          data-toggle="dropdown"
-                          >Thống kê
-                        </a>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item scroll" href="#covid-19"
-                            >Tỉnh thành
-                          </a>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
 
-                  <div class="signin-btn">
-                    <a class="btn btn-primary" href="#">Theo dõi COVID-19</a>
-                  </div>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero banner-3" id="app-banner3">
-        <div class="container">
-          <div class="row justify-content-between align-items-center">
-            <div class="col-xl-6 col-lg-6">
-              <div class="counter-area">
-                <div class="count-miter-3">
-                  <div class="count-area case">
-                    <span class="count-title">Việt Nam số ca</span>
-                    <h3 class="count-box worldwide" id="VN_Positive">
-                      Loading..
-                    </h3>
-                  </div>   
-                  <div class="count-area total">
-                    <span class="count-title">Hôm nay</span>
-                    <h3 class="count-box total" id="VN_Total">
-                      Loading..
-                    </h3>
-                  </div>
-                  <div class="count-area spread">
-                    <span class="count-title">Tỉnh/thành</span>
-                    <h3 class="count-box spreads" id="VN_Spread">Loading..</h3>
-                  </div>
+    <div class="hero banner-3" id="app-banner3">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-xl-6 col-lg-6">
+            <div class="counter-area">
+              <div class="count-miter-3">
+                <div class="count-area case">
+                  <span class="count-title">Việt Nam số ca</span>
+                  <h3 class="count-box worldwide" id="VN_Positive">
+                    Loading..
+                  </h3>
                 </div>
-                <div class="hero-img">
-                  <img src="./images/hero/6.png" alt="" class="img-fluid" />
+                <div class="count-area total">
+                  <span class="count-title">Hôm nay</span>
+                  <h3 class="count-box total" id="VN_Total">
+                    Loading..
+                  </h3>
+                </div>
+                <div class="count-area spread">
+                  <span class="count-title">Tỉnh/thành</span>
+                  <h3 class="count-box spreads" id="VN_Spread">Loading..</h3>
                 </div>
               </div>
-            </div>
-            <div class="col-xl-6 col-lg-6">
-              <div class="hero-content">
-                <h1>
-                  <span class="text-danger">[Covid-19]</span> Dịch bệnh
-                  <br />Lời khuyên
-                </h1>
-                <h3>COVID-19 là một căn bệnh do một loại virus.</h3>
-                <p>
-                   Gây ảnh hưởng đến hệ hô hấp của các loại động có vú, bao gồm cả con người. Các loài virus Corona gây ra các triệu chứng đa dạng từ nhẹ đến nặng như cảm lạnh thông thường, mệt mỏi viêm phổi, hội chứng suy hô hấp cấp tính nặng (SARS) và cũng có thể ảnh hưởng đến cả đường tiêu hóa.
-                </p>
-                <a href="#" class="btn btn-primary">Thống kê</a>
-                <a
-                  href="https://www.youtube.com/watch?v=BtulL3oArQw"
-                  class="popup-youtube btn-play"
-                  ><i class="fa fa-play"></i>Play Video</a
-                >
+              <div class="hero-img">
+                <img src="./images/hero/6.png" alt="" class="img-fluid" />
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="cta section-padding country-count bg-light">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-12">
-              <div id="TopCovidProvince" class="covid-province-info owl-carousel owl-btn-center-lr owl-none">
-                <div class="item country-box" data-country-id="1">
-                  <div class="title"></div>
-                  <div>Tổng số ca <span class="dz-totalcases">0</span></div>
-                  <div>Ca nhiễm hôm nay <span class="dz-newcases">0</span></div>
-                </div>
-                <div class="item country-box" data-country-id="2">
-                  <div class="title"></div>
-                  <div>Tổng số ca <span class="dz-totalcases">0</span></div>
-                  <div>Ca nhiễm hôm nay <span class="dz-newcases">0</span></div>
-                </div>
-                <div class="item country-box" data-country-id="3">
-                  <div class="title"></div>
-                  <div>Tổng số ca <span class="dz-totalcases">0</span></div>
-                  <div>Ca nhiễm hôm nay <span class="dz-newcases">0</span></div>
-                </div>
-                <div class="item country-box" data-country-id="4">
-                    <div class="title"></div>
-                    <div>Tổng số ca <span class="dz-totalcases">0</span></div>
-                    <div>Ca nhiễm hôm nay <span class="dz-newcases">0</span></div>
-                  </div>
-                  <div class="item country-box" data-country-id="5">
-                    <div class="title"></div>
-                    <div>Tổng số ca <span class="dz-totalcases">0</span></div>
-                    <div>Ca nhiễm hôm nay <span class="dz-newcases">0</span></div>
-                  </div>
-                  <div class="item country-box" data-country-id="6">
-                    <div class="title"></div>
-                    <div>Tổng số ca <span class="dz-totalcases">0</span></div>
-                    <div>Ca nhiễm hôm nay <span class="dz-newcases">0</span></div>
-                  </div>
-                  <div class="item country-box" data-country-id="7">
-                    <div class="title"></div>
-                    <div>Tổng số ca <span class="dz-totalcases">0</span></div>
-                    <div>Ca nhiễm hôm nay <span class="dz-newcases">0</span></div>
-                  </div>
-                  <div class="item country-box" data-country-id="8">
-                    <div class="title"></div>
-                    <div>Tổng số ca <span class="dz-totalcases">0</span></div>
-                    <div>Ca nhiễm hôm nay <span class="dz-newcases">0</span></div>
-                  </div>
-                  <div class="item country-box" data-country-id="9">
-                    <div class="title"></div>
-                    <div>Tổng số ca <span class="dz-totalcases">0</span></div>
-                    <div>Ca nhiễm hôm nay <span class="dz-newcases">0</span></div>
-                  </div>
-                  <div class="item country-box" data-country-id="10">
-                    <div class="title"></div>
-                    <div>Tổng số ca <span class="dz-totalcases">0</span></div>
-                    <div>Ca nhiễm hôm nay <span class="dz-newcases">0</span></div>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-symptom section-padding" id="symptom">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-6">
-              <div class="section-title text-center">
-                <h5>Các triệu chứng của COVID-19 là gì ?</h5>
-                <h2>Triệu chứng của COVID-19</h2>
-                <p>
-                  Có thể mất đến <span class="text-danger">14</span> ngày để
-                  xuất hiện sau khi tiếp xúc với <strong>VIRUS</strong>. Đây là
-                  thời gian ủ bệnh lâu nhất được biết đến của bệnh này.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xl-4 col-lg-4 col-md-4">
-              <div class="symptom-content">
-                <span><img src="images/icons/fever.svg" alt="" /></span>
-                <h4>Sốt</h4>
-                <p>
-                  Sốt là một cách cơ thể chống lại bệnh. Đây cũng là dấu hiệu
-                  đầu tiên của virus corona. "Mặc dù về mặt kỹ thuật thì sốt có
-                  nghĩa là khi nhiệt độ cơ thể cao trên mức bình thường (37
-                  <sup class="text-danger">o</sup>C), nhưng trên thực tế, một
-                  người thường không được coi là bị sốt đáng kể cho đến khi
-                  nhiệt độ trên 38 <sup class="text-danger">o</sup>C
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-4">
-              <div class="symptom-content">
-                <span><img src="images/icons/cough.svg" alt="" /></span>
-                <h4>Ho</h4>
-                <p>
-                  Do COVID-19 kích thích mô phổi, ho sẽ là ho khan và dai dẳng,
-                  thường đi kèm với khó thở và đau cơ". "Khi bệnh tiến triển,
-                  các mô phổi chứa đầy dịch và bạn có thể cảm thấy khó thở hơn
-                  nữa khi cơ thể phải vật lộn để có đủ oxy.
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-4">
-              <div class="symptom-content">
-                <span><img src="images/icons/breathing.svg" alt="" /></span>
-                <h4>Khó thở</h4>
-                <p>
-                  Đây thường là một trong những dấu hiệu đầu tiên của Covid-19,
-                  và nó có thể kéo dài vài tuần hoặc vài tháng sau khi phục hồi.
-                  Virus gây viêm phổi và tổn thương có thể khiến bạn khó thở, và
-                  có thể dẫn đến viêm phổi hoặc hội chứng suy hô hấp cấp (ARDS).
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="how-spread section-padding" id="spread">
-        <div class="container">
-          <div class="row align-items-center justify-content-between">
-            <div class="col-xl-5 col-lg-5 col-md-6">
-              <div class="spread-img">
-                <img src="./images/home/1.png" alt="" class="img-fluid" />
-              </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6">
-              <div class="section-title">
-                <h2>COVID-19 lây lan như thế nào</h2>
-                <p>Covid-19 thường lây lan từ người bị bệnh qua:</p>
-              </div>
-              <div class="spread-content">
-                <ul>
-                  <li>
-                    <i class="mdi mdi-check"></i>
-                    Các giọt bắn mang mầm bệnh thông qua đường hô hấp khi bạn ho
-                    hoặc hắt hơi
-                  </li>
-                  <li>
-                    <i class="mdi mdi-check"></i>
-                    Tiếp xúc cá nhân gần gũi, chẳng hạn như chạm hoặc bắt tay
-                  </li>
-                  <li>
-                    <i class="mdi mdi-check"></i>
-                    Chạm vào vật gì có virus, sau đó chạm vào mắt, mũi hoặc
-                    miệng trước khi rửa tay
-                  </li>
-                </ul>
-
-                <p>
-                  Tránh đám đông và những không gian trong nhà có thông gió kém
-                  và cải thiện hệ thống thông gió.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="prevention section-padding bg-light" id="prevention">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-6">
-              <div class="section-title text-center">
-                <h5>Làm cách nào để ngăn chặn Covid-19 ?</h5>
-                <h2>PHÒNG CHỐNG COVID-19</h2>
-                <p>Cách tốt nhất để ngăn chặn sự lây lan của Covid-19 là:</p>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="have-symptom-content">
-                <span><img src="./images/icons/wash-hand.png" alt="" /></span>
-                <h4>Rửa Tay</h4>
-                <p>
-                  Thường xuyên rửa tay bằng xà phòng và nước trong ít nhất 20
-                  giây
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="have-symptom-content">
-                <span><img src="./images/icons/face.png" alt="" /></span>
-                <h4>Tránh Chạm Vào</h4>
-                <p>
-                  Tránh chạm vào mắt, mũi hoặc miệng của bạn, đặc biệt là với
-                  tay chưa rửa sạch
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="have-symptom-content">
-                <span><img src="./images/icons/avoid.png" alt="" /></span>
-                <h4>Tránh Gần</h4>
-                <p>Tránh tiếp xúc gần với người bị bệnh</p>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="have-symptom-content">
-                <span
-                  ><img src="./images/icons/mouth-tissue.png" alt=""
-                /></span>
-                <h4>Che Miệng và Mũi</h4>
-                <p>
-                  Che miệng và mũi bằng cách
-                  <strong>đeo khẩu trang y tế</strong> để giảm sự lây lan của vi
-                  trùng
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="have-symptom-content">
-                <span><img src="./images/icons/trash.png" alt="" /></span>
-                <h4>Sử Dụng Thùng Rác</h4>
-                <p>
-                  Bỏ ngay khẩu trang y tế sau khi sử dụng vào thùng rác càng sớm
-                  càng tốt và rửa tay sau đó
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="have-symptom-content">
-                <span><img src="./images/icons/soap.png" alt="" /></span>
-                <h4>Làm Sạch Và Khử Trùng</h4>
-                <p>
-                  Làm sạch và khử trùng các đồ vật và bề mặt thường xuyên chạm
-                  vào, chẳng hạn như đồ chơi, thiết bị điện tử và tay nắm cửa
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="have-symptom-content">
-                <span><img src="./images/icons/home2.png" alt="" /></span>
-                <h4>Ở Nhà</h4>
-                <p>Ở nhà nếu bạn bị bệnh để tránh lây bệnh cho người khác</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hand-wash section-padding" id="hand-wash">
-        <div class="container">
-          <div class="row justify-content-center text-center">
-            <div class="col-xl-6">
-              <div class="section-title">
-                <h5>Làm theo các bước</h5>
-                <h2>Rửa tay của bạn trong 20 giây</h2>
-                <p>Cách tốt nhất để ngăn chặn sự lây lan</p>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-xl-3 col-lg-4 col-md-6">
-              <div class="hands-wash-text">
-                <span><img src="./images/wash-hand/10.png" alt="" /></span>
-                <div class="circle">1</div>
-                <h4>20 giây rửa sạch</h4>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-              <div class="hands-wash-text">
-                <span><img src="./images/wash-hand/1.png" alt="" /></span>
-                <div class="circle">2</div>
-
-                <h4>Làm ước tay</h4>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-              <div class="hands-wash-text">
-                <span><img src="./images/wash-hand/2.png" alt="" /></span>
-                <div class="circle">3</div>
-
-                <h4>Sử dụng xà phòng</h4>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-              <div class="hands-wash-text">
-                <span><img src="./images/wash-hand/3.png" alt="" /></span>
-                <div class="circle">4</div>
-
-                <h4>Rửa lòng bàn tay và mu bàn tay</h4>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-              <div class="hands-wash-text">
-                <span><img src="./images/wash-hand/4.png" alt="" /></span>
-                <div class="circle">5</div>
-
-                <h4>Giữa các ngón tay</h4>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-              <div class="hands-wash-text">
-                <span><img src="./images/wash-hand/5.png" alt="" /></span>
-                <div class="circle">6</div>
-
-                <h4>Dưới móng tay</h4>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-              <div class="hands-wash-text">
-                <span><img src="./images/wash-hand/6.png" alt="" /></span>
-                <div class="circle">7</div>
-
-                <h4>Ngón tay cái</h4>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-              <div class="hands-wash-text">
-                <span><img src="./images/wash-hand/7.png" alt="" /></span>
-                <div class="circle">8</div>
-                <h4>Rửa sạch tay</h4>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-              <div class="hands-wash-text">
-                <span><img src="./images/wash-hand/8.png" alt="" /></span>
-                <div class="circle">9</div>
-                <h4>Lau khô tay</h4>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-              <div class="hands-wash-text">
-                <span><img src="./images/wash-hand/9.png" alt="" /></span>
-                <div class="circle">10</div>
-                <h4>Tắt vòi bằng khăn giấy</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="have-symptom section-padding">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-6">
-              <div class="section-title text-center">
-                <h5>Nếu cảm thấy</h5>
-                <h2>Có triệu chứng của Covid-19</h2>
-                <p>
-                  Nếu bạn có
-                  <strong
-                    >TRIỆU CHỨNG CỦA COVID-19 - sốt, ho, hoặc khó thở</strong
-                  >:
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xl-4 col-lg-4 col-md-4">
-              <div class="have-symptom-content">
-                <img src="./images/icons/home.png" alt="" width="100" />
-                <h4>Ở NHÀ</h4>
-                <p>
-                  Để tránh lây lan cho người khác nếu bạn ở với người khác, hãy
-                  ở phòng riêng hoặc giữ khoảng cách 2 mét trở lên
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-4">
-              <div class="have-symptom-content">
-                <img src="./images/icons/call.png" alt="" width="100" />
-                <h4>Gọi điện trước</h4>
-                <p>
-                  Khi bạn đến gặp chuyên gia chăm sóc sức khỏe hoặc gọi cho cơ
-                  quan y tế địa phương cho họ biết các triệu chứng của bạn và
-                  làm theo hướng dẫn của họ
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-4">
-              <div class="have-symptom-content">
-                <img src="./images/icons/ambulance.png" alt="" width="100" />
-                <h4>Gọi khẩn cấp</h4>
-                <p>
-                  Gọi đường dây nóng cơ quan y tế địa phương hoặc của Bộ Y tế
-                  <strong>( 1900 3228 hoặc 1900 9095 )</strong>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="page-title section-padding" id="covid-19">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-12">
-              <div class="page_title-content">
-                <p>COVID-19</p>
-                <h3>Cập nhật số liệu Covid-19 tại Việt Nam theo Tỉnh Thành</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="prevention section-padding">
-        <div class="container">
-          <table id="ProvinceDataTable" class="display" width="100%"></table>
-        </div>
-      </div>
-
-      <div class="bottom section-padding">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-3 col-lg-4 col-md-3 col-sm-8">
-              <div class="bottom-logo">
-                <img src="./images/logo.png" alt="" class="img-fluid" />
-              </div>
+          <div class="col-xl-6 col-lg-6">
+            <div class="hero-content">
+              <h1>
+                <span class="text-danger">[Covid-19]</span> Dịch bệnh
+                <br />Lời khuyên
+              </h1>
+              <h3>COVID-19 là một căn bệnh do một loại virus.</h3>
               <p>
-                “Chống dịch như chống giặc”, mạnh mẽ hơn, quyết liệt hơn, thần
-                tốc hơn
+                Gây ảnh hưởng đến hệ hô hấp của các loại động có vú, bao gồm cả con người. Các loài virus Corona gây ra
+                các triệu chứng đa dạng từ nhẹ đến nặng như cảm lạnh thông thường, mệt mỏi viêm phổi, hội chứng suy hô
+                hấp cấp tính nặng (SARS) và cũng có thể ảnh hưởng đến cả đường tiêu hóa.
+              </p>
+              <a href="#" class="btn btn-primary">Thống kê</a>
+              <a href="https://www.youtube.com/watch?v=BtulL3oArQw" class="popup-youtube btn-play"><i
+                  class="fa fa-play"></i>Play Video</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta section-padding country-count bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div id="TopCovidProvince" class="covid-province-info owl-carousel owl-btn-center-lr owl-none">
+              <div class="item country-box" data-country-id="1">
+                <div class="title"></div>
+                <div>Tổng số ca <span class="dz-totalcases">0</span></div>
+                <div>Ca nhiễm hôm nay <span class="dz-newcases">0</span></div>
+              </div>
+              <div class="item country-box" data-country-id="2">
+                <div class="title"></div>
+                <div>Tổng số ca <span class="dz-totalcases">0</span></div>
+                <div>Ca nhiễm hôm nay <span class="dz-newcases">0</span></div>
+              </div>
+              <div class="item country-box" data-country-id="3">
+                <div class="title"></div>
+                <div>Tổng số ca <span class="dz-totalcases">0</span></div>
+                <div>Ca nhiễm hôm nay <span class="dz-newcases">0</span></div>
+              </div>
+              <div class="item country-box" data-country-id="4">
+                <div class="title"></div>
+                <div>Tổng số ca <span class="dz-totalcases">0</span></div>
+                <div>Ca nhiễm hôm nay <span class="dz-newcases">0</span></div>
+              </div>
+              <div class="item country-box" data-country-id="5">
+                <div class="title"></div>
+                <div>Tổng số ca <span class="dz-totalcases">0</span></div>
+                <div>Ca nhiễm hôm nay <span class="dz-newcases">0</span></div>
+              </div>
+              <div class="item country-box" data-country-id="6">
+                <div class="title"></div>
+                <div>Tổng số ca <span class="dz-totalcases">0</span></div>
+                <div>Ca nhiễm hôm nay <span class="dz-newcases">0</span></div>
+              </div>
+              <div class="item country-box" data-country-id="7">
+                <div class="title"></div>
+                <div>Tổng số ca <span class="dz-totalcases">0</span></div>
+                <div>Ca nhiễm hôm nay <span class="dz-newcases">0</span></div>
+              </div>
+              <div class="item country-box" data-country-id="8">
+                <div class="title"></div>
+                <div>Tổng số ca <span class="dz-totalcases">0</span></div>
+                <div>Ca nhiễm hôm nay <span class="dz-newcases">0</span></div>
+              </div>
+              <div class="item country-box" data-country-id="9">
+                <div class="title"></div>
+                <div>Tổng số ca <span class="dz-totalcases">0</span></div>
+                <div>Ca nhiễm hôm nay <span class="dz-newcases">0</span></div>
+              </div>
+              <div class="item country-box" data-country-id="10">
+                <div class="title"></div>
+                <div>Tổng số ca <span class="dz-totalcases">0</span></div>
+                <div>Ca nhiễm hôm nay <span class="dz-newcases">0</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-symptom section-padding" id="symptom">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-6">
+            <div class="section-title text-center">
+              <h5>Các triệu chứng của COVID-19 là gì ?</h5>
+              <h2>Triệu chứng của COVID-19</h2>
+              <p>
+                Có thể mất đến <span class="text-danger">14</span> ngày để
+                xuất hiện sau khi tiếp xúc với <strong>VIRUS</strong>. Đây là
+                thời gian ủ bệnh lâu nhất được biết đến của bệnh này.
               </p>
             </div>
-            <div class="col-xl-3 col-lg-2 col-md-2 col-sm-4">
-              <div class="bottom-widget">
-                <h4 class="widget-title">Liên kết</h4>
-                <ul>
-                  <li><a href="#">Phòng ngừa</a></li>
-                  <li><a href="#">Cách ly</a></li>
-                  <li><a href="#">Giới thiệu</a></li>
-                  <li><a href="#">Trợ giúp</a></li>
-                </ul>
-              </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 col-md-4">
+            <div class="symptom-content">
+              <span><img src="images/icons/fever.svg" alt="" /></span>
+              <h4>Sốt</h4>
+              <p>
+                Sốt là một cách cơ thể chống lại bệnh. Đây cũng là dấu hiệu
+                đầu tiên của virus corona. "Mặc dù về mặt kỹ thuật thì sốt có
+                nghĩa là khi nhiệt độ cơ thể cao trên mức bình thường (37
+                <sup class="text-danger">o</sup>C), nhưng trên thực tế, một
+                người thường không được coi là bị sốt đáng kể cho đến khi
+                nhiệt độ trên 38 <sup class="text-danger">o</sup>C
+              </p>
             </div>
-            <div class="col-xl-3 col-lg-2 col-md-3 col-sm-4">
-              <div class="bottom-widget">
-                <h4 class="widget-title">Liên kết quan trọng</h4>
-                <ul>
-                  <li><a href="#">Phòng ngừa</a></li>
-                  <li><a href="#">Cách ly</a></li>
-                  <li><a href="#">Giới thiệu</a></li>
-                  <li><a href="#">Trợ giúp</a></li>
-                </ul>
-              </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-4">
+            <div class="symptom-content">
+              <span><img src="images/icons/cough.svg" alt="" /></span>
+              <h4>Ho</h4>
+              <p>
+                Do COVID-19 kích thích mô phổi, ho sẽ là ho khan và dai dẳng,
+                thường đi kèm với khó thở và đau cơ". "Khi bệnh tiến triển,
+                các mô phổi chứa đầy dịch và bạn có thể cảm thấy khó thở hơn
+                nữa khi cơ thể phải vật lộn để có đủ oxy.
+              </p>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-8">
-              <div class="bottom-widget">
-                <h4 class="widget-title">Liên kết hữu ích</h4>
-                <ul>
-                  <li><a href="#">Phòng ngừa</a></li>
-                  <li><a href="#">Cách ly</a></li>
-                  <li><a href="#">Giới thiệu</a></li>
-                  <li><a href="#">Trợ giúp</a></li>
-                </ul>
-              </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-4">
+            <div class="symptom-content">
+              <span><img src="images/icons/breathing.svg" alt="" /></span>
+              <h4>Khó thở</h4>
+              <p>
+                Đây thường là một trong những dấu hiệu đầu tiên của Covid-19,
+                và nó có thể kéo dài vài tuần hoặc vài tháng sau khi phục hồi.
+                Virus gây viêm phổi và tổn thương có thể khiến bạn khó thở, và
+                có thể dẫn đến viêm phổi hoặc hội chứng suy hô hấp cấp (ARDS).
+              </p>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-              <div class="copyright">
-                <p>
-                  © Copyright 2021 <a href="javascript:void(0)">Covid-19</a>
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-              <div class="footer-social">
-                <ul>
-                  <li>
-                    <a href="javascript:void(0)"
-                      ><i class="fa fa-facebook"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0)"
-                      ><i class="fa fa-twitter"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0)"
-                      ><i class="fa fa-linkedin"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0)"
-                      ><i class="fa fa-youtube"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a data-scroll href="#header" id="scroll-to-top"
-          ><i class="fa fa-arrow-up"></i
-        ></a>
       </div>
     </div>
-    <script src="./js/global.js"></script>
-    <script src="./js/plugins/smooth-scroll.min.js"></script>
-    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="./vendor/magnific-popup/magnific-popup.js"></script>
-    <script src="vendor/datatables/datatables.min.js"></script>
-    <script src="./vendor/owl-carousel/js/owl.carousel.min.js"></script>
-    <script src="./js/plugins/owl-carousel-init.js"></script>
-    <script src="./js/app.js"></script>
-    <script src="./vendor/particles/particles.js"></script>
-    <script src="./vendor/particles/particles-app.js"></script>
-  </body>
+
+    <div class="how-spread section-padding" id="spread">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-xl-5 col-lg-5 col-md-6">
+            <div class="spread-img">
+              <img src="./images/home/1.png" alt="" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="section-title">
+              <h2>COVID-19 lây lan như thế nào</h2>
+              <p>Covid-19 thường lây lan từ người bị bệnh qua:</p>
+            </div>
+            <div class="spread-content">
+              <ul>
+                <li>
+                  <i class="mdi mdi-check"></i>
+                  Các giọt bắn mang mầm bệnh thông qua đường hô hấp khi bạn ho
+                  hoặc hắt hơi
+                </li>
+                <li>
+                  <i class="mdi mdi-check"></i>
+                  Tiếp xúc cá nhân gần gũi, chẳng hạn như chạm hoặc bắt tay
+                </li>
+                <li>
+                  <i class="mdi mdi-check"></i>
+                  Chạm vào vật gì có virus, sau đó chạm vào mắt, mũi hoặc
+                  miệng trước khi rửa tay
+                </li>
+              </ul>
+
+              <p>
+                Tránh đám đông và những không gian trong nhà có thông gió kém
+                và cải thiện hệ thống thông gió.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prevention section-padding bg-light" id="prevention">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-6">
+            <div class="section-title text-center">
+              <h5>Làm cách nào để ngăn chặn Covid-19 ?</h5>
+              <h2>PHÒNG CHỐNG COVID-19</h2>
+              <p>Cách tốt nhất để ngăn chặn sự lây lan của Covid-19 là:</p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="have-symptom-content">
+              <span><img src="./images/icons/wash-hand.png" alt="" /></span>
+              <h4>Rửa Tay</h4>
+              <p>
+                Thường xuyên rửa tay bằng xà phòng và nước trong ít nhất 20
+                giây
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="have-symptom-content">
+              <span><img src="./images/icons/face.png" alt="" /></span>
+              <h4>Tránh Chạm Vào</h4>
+              <p>
+                Tránh chạm vào mắt, mũi hoặc miệng của bạn, đặc biệt là với
+                tay chưa rửa sạch
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="have-symptom-content">
+              <span><img src="./images/icons/avoid.png" alt="" /></span>
+              <h4>Tránh Gần</h4>
+              <p>Tránh tiếp xúc gần với người bị bệnh</p>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="have-symptom-content">
+              <span><img src="./images/icons/mouth-tissue.png" alt="" /></span>
+              <h4>Che Miệng và Mũi</h4>
+              <p>
+                Che miệng và mũi bằng cách
+                <strong>đeo khẩu trang y tế</strong> để giảm sự lây lan của virus
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="have-symptom-content">
+              <span><img src="./images/icons/trash.png" alt="" /></span>
+              <h4>Sử Dụng Thùng Rác</h4>
+              <p>
+                Bỏ ngay khẩu trang y tế sau khi sử dụng vào thùng rác càng sớm
+                càng tốt và rửa tay sau đó
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="have-symptom-content">
+              <span><img src="./images/icons/soap.png" alt="" /></span>
+              <h4>Làm Sạch Và Khử Trùng</h4>
+              <p>
+                Làm sạch và khử trùng các đồ vật và bề mặt thường xuyên chạm
+                vào, chẳng hạn như đồ chơi, thiết bị điện tử và tay nắm cửa
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="have-symptom-content">
+              <span><img src="./images/icons/home2.png" alt="" /></span>
+              <h4>Ở Nhà</h4>
+              <p>Ở nhà nếu bạn bị bệnh để tránh lây bệnh cho người khác</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hand-wash section-padding" id="hand-wash">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-xl-6">
+            <div class="section-title">
+              <h5>Làm theo các bước</h5>
+              <h2>Rửa tay của bạn trong 20 giây</h2>
+              <p>Cách tốt nhất để ngăn chặn sự lây lan</p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="hands-wash-text">
+              <span><img src="./images/wash-hand/10.png" alt="" /></span>
+              <div class="circle">1</div>
+              <h4>20 giây rửa sạch</h4>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="hands-wash-text">
+              <span><img src="./images/wash-hand/1.png" alt="" /></span>
+              <div class="circle">2</div>
+
+              <h4>Làm ước tay</h4>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="hands-wash-text">
+              <span><img src="./images/wash-hand/2.png" alt="" /></span>
+              <div class="circle">3</div>
+
+              <h4>Sử dụng xà phòng</h4>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="hands-wash-text">
+              <span><img src="./images/wash-hand/3.png" alt="" /></span>
+              <div class="circle">4</div>
+
+              <h4>Rửa lòng bàn tay và mu bàn tay</h4>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="hands-wash-text">
+              <span><img src="./images/wash-hand/4.png" alt="" /></span>
+              <div class="circle">5</div>
+
+              <h4>Giữa các ngón tay</h4>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="hands-wash-text">
+              <span><img src="./images/wash-hand/5.png" alt="" /></span>
+              <div class="circle">6</div>
+
+              <h4>Dưới móng tay</h4>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="hands-wash-text">
+              <span><img src="./images/wash-hand/6.png" alt="" /></span>
+              <div class="circle">7</div>
+
+              <h4>Ngón tay cái</h4>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="hands-wash-text">
+              <span><img src="./images/wash-hand/7.png" alt="" /></span>
+              <div class="circle">8</div>
+              <h4>Rửa sạch tay</h4>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="hands-wash-text">
+              <span><img src="./images/wash-hand/8.png" alt="" /></span>
+              <div class="circle">9</div>
+              <h4>Lau khô tay</h4>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="hands-wash-text">
+              <span><img src="./images/wash-hand/9.png" alt="" /></span>
+              <div class="circle">10</div>
+              <h4>Tắt vòi bằng khăn giấy</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="have-symptom section-padding">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-6">
+            <div class="section-title text-center">
+              <h5>Nếu cảm thấy</h5>
+              <h2>Có triệu chứng của Covid-19</h2>
+              <p>
+                Nếu bạn có
+                <strong>TRIỆU CHỨNG CỦA COVID-19 - sốt, ho, hoặc khó thở</strong>:
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 col-md-4">
+            <div class="have-symptom-content">
+              <img src="./images/icons/home.png" alt="" width="100" />
+              <h4>Ở NHÀ</h4>
+              <p>
+                Để tránh lây lan cho người khác nếu bạn ở với người khác, hãy
+                ở phòng riêng hoặc giữ khoảng cách 2 mét trở lên
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-4">
+            <div class="have-symptom-content">
+              <img src="./images/icons/call.png" alt="" width="100" />
+              <h4>Gọi điện trước</h4>
+              <p>
+                Khi bạn đến gặp chuyên gia chăm sóc sức khỏe hoặc gọi cho cơ
+                quan y tế địa phương cho họ biết các triệu chứng của bạn và
+                làm theo hướng dẫn của họ
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-4">
+            <div class="have-symptom-content">
+              <img src="./images/icons/ambulance.png" alt="" width="100" />
+              <h4>Gọi khẩn cấp</h4>
+              <p>
+                Gọi đường dây nóng cơ quan y tế địa phương hoặc của Bộ Y tế
+                <strong>( 1900 3228 hoặc 1900 9095 )</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-title section-padding" id="covid-19">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="page_title-content">
+              <p>COVID-19</p>
+              <h3>Cập nhật số liệu Covid-19 tại Việt Nam theo Tỉnh Thành</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prevention section-padding">
+      <div class="container">
+        <table id="ProvinceDataTable" class="display" width="100%"></table>
+      </div>
+    </div>
+
+    <div class="bottom section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-3 col-lg-4 col-md-3 col-sm-8">
+            <div class="bottom-logo">
+              <img src="./images/logo.png" alt="" class="img-fluid" />
+            </div>
+            <p>
+              “Chống dịch như chống giặc”, mạnh mẽ hơn, quyết liệt hơn, thần
+              tốc hơn
+            </p>
+          </div>
+          <div class="col-xl-3 col-lg-2 col-md-2 col-sm-4">
+            <div class="bottom-widget">
+              <h4 class="widget-title">Liên kết</h4>
+              <ul>
+                <li><a href="#">Phòng ngừa</a></li>
+                <li><a href="#">Cách ly</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Trợ giúp</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-2 col-md-3 col-sm-4">
+            <div class="bottom-widget">
+              <h4 class="widget-title">Liên kết quan trọng</h4>
+              <ul>
+                <li><a href="#">Phòng ngừa</a></li>
+                <li><a href="#">Cách ly</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Trợ giúp</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-8">
+            <div class="bottom-widget">
+              <h4 class="widget-title">Liên kết hữu ích</h4>
+              <ul>
+                <li><a href="#">Phòng ngừa</a></li>
+                <li><a href="#">Cách ly</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Trợ giúp</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+            <div class="copyright">
+              <p>
+                © Copyright 2021 <a href="javascript:void(0)">Covid-19</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+            <div class="footer-social">
+              <ul>
+                <li>
+                  <a href="javascript:void(0)"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)"><i class="fa fa-youtube"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a data-scroll href="#header" id="scroll-to-top"><i class="fa fa-arrow-up"></i></a>
+    </div>
+  </div>
+  <script src="./js/global.js"></script>
+  <script src="./js/plugins/smooth-scroll.min.js"></script>
+  <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./vendor/magnific-popup/magnific-popup.js"></script>
+  <script src="vendor/datatables/datatables.min.js"></script>
+  <script src="./vendor/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="./js/plugins/owl-carousel-init.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./vendor/particles/particles.js"></script>
+  <script src="./vendor/particles/particles-app.js"></script>
+</body>
+
 </html>

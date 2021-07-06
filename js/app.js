@@ -153,7 +153,7 @@ jQuery(window).on("load", function () {
 
     jQuery(window).on("load", function () {
         getDataProvinceCovidVietNam();
-        getVaccinedDataVietNam();
+        //getVaccinedDataVietNam();
     });
 
     // function getDataCovid() {
@@ -297,12 +297,15 @@ jQuery(window).on("load", function () {
     }
 
     function getVaccinedDataVietNam() {
-        debugger
         const $url = "https://vnexpress.net/microservice/sheet/type/vaccine_data_vietnam_city";
         jQuery.ajax({
-            method: "GET",
+            crossOrigin: true,
             url: $url,
-            dataType: "text",
+            method: "GET",
+            contentType: "jsonp",
+            // headers: {
+            //     'Access-Control-Allow-Origin': 'http://127.0.0.1:5500/'
+            // },
             beforeSend: function (xhr) { },
             success: function (response) {
                 console.info(response);
